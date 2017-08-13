@@ -112,20 +112,43 @@ RUN set -xe \
 		\
 		--disable-cgi \
 		\
-# --enable-ftp is included here because ftp_ssl_connect() needs ftp to be compiled statically (see https://github.com/docker-library/php/issues/236)
-		--enable-ftp \
-# --enable-mbstring is included here because otherwise there's no way to get pecl to use it properly (see https://github.com/docker-library/php/issues/195)
-		--enable-mbstring \
-# --enable-mysqlnd is included here because it's harder to compile after the fact than extensions are (since it's a plugin for several extensions, not an extension in itself)
-		--enable-mysqlnd \
+        --enable-mbstring \
+        #--enable-zip \
+        #--enable-bcmath \
+        #--enable-pcntl \
+        --enable-ftp \
+        #--enable-exif \
+        #--enable-calendar \
+        #--enable-sysvmsg \
+        #--enable-sysvsem \
+        #--enable-sysvshm \
+        #--enable-wddx \
+        --with-curl \
+        #--with-mcrypt \
+        --with-iconv \
+        #--with-gmp \
+        #--with-pspell \
+        #--with-gd \
+        #--with-jpeg-dir=/usr \
+        #--with-png-dir=/usr \
+        #--with-zlib-dir=/usr \
+        #--with-xpm-dir=/usr \
+        #--with-freetype-dir=/usr \
+        #--with-t1lib=/usr \
+        #--enable-gd-native-ttf \
+        #--enable-gd-jis-conv \
+
+        --with-opcache \
+        --with-libedit \
+        --with-openssl \
+        --with-mysql \
+        --with-pdo-mysql \
+        --with-zlib \
+        #--with-gettext=/usr \
+        #--with-zlib=/usr \
+        #--with-recode=/usr \
+        #--with-mysqli=/usr/bin/mysql_config \
 		\
-		--with-curl \
-		--with-libedit \
-		--with-openssl \
-		--with-zlib \
-		\
-# bundled pcre is too old for s390x (which isn't exactly a good sign)
-# /usr/src/php/ext/pcre/pcrelib/pcre_jit_compile.c:65:2: error: #error Unsupported architecture
 		--with-pcre-regex=/usr \
 		\
 		$PHP_EXTRA_CONFIGURE_ARGS \
