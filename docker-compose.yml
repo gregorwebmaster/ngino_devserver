@@ -1,0 +1,13 @@
+version: "3"
+services:
+  nginx:
+    build: ./images/nginx
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - ./data/www:/var/www
+      - ./config/nginx/vhosts:/etc/nginx/vhosts
+      - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
