@@ -8,5 +8,9 @@
 
 <h1>develop Server</h1>
 
+<?php
+echo phpinfo();
+?>
+
 </body>
 </html>
