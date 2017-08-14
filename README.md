@@ -18,6 +18,12 @@ Docker configuration for LNPM server with Redis DB
 1. Nginx    - 80,443,8080
 2. phpMyAdmin - 8855
 
+## MySQL login data
+user root
+pswd yourRootPassword
+
+Remember to change default password after instalation
+
 ## Instalation
 1. clone this repository
 2. go into repository directory (default ngino_webserver)
