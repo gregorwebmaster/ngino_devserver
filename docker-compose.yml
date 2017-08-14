@@ -1,0 +1,21 @@
+version: "3"
+services:
+  nginx:
+    build: ./images/nginx
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - ./data/www:/var/www
+      - ./config/nginx/vhosts:/etc/nginx/vhosts
+      - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./logs/nginx:/var/log/nginx
+    links:
+      - php71
+  php71:
+    build: ./images/php71
+    volumes:
+      - ./config/php71/php-fpm.conf:/usr/local/etc/php-fpm.conf
+      - ./data/www:/var/www
+      - ./logs/php:/var/log/php
