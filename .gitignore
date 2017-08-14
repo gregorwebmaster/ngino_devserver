@@ -1,2 +1,4 @@
 tmp/
 .idea/
+logs/nginx/*.log
+logs/php/*.log

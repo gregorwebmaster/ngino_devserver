@@ -7,7 +7,7 @@ services:
       - "443:443"
       - "8080:8080"
     volumes:
-      - ./data/www:/var/www/html
+      - ./data/www:/var/www
       - ./config/nginx/vhosts:/etc/nginx/vhosts
       - ./config/nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./logs/nginx:/var/log/nginx
@@ -16,4 +16,6 @@ services:
   php71:
     build: ./images/php71
     volumes:
-      - ./data/www:/var/www/html
+      - ./config/php71/php-fpm.conf:/usr/local/etc/php-fpm.conf
+      - ./data/www:/var/www
+      - ./logs/php:/var/log/php
