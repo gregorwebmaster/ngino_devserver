@@ -19,3 +19,23 @@ services:
       - ./config/php71/php-fpm.conf:/usr/local/etc/php-fpm.conf
       - ./data/www:/var/www
       - ./logs/php:/var/log/php
+    links:
+      - mysql
+      - redis
+  mysql:
+    image: mysql:5.7.19
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=yourRootPassword
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+    restart: always
+    ports:
+      - 8855:80
+    volumes:
+      - /sessions
+  redis:
+    image: redis:4.0.1-alpine
