@@ -21,6 +21,7 @@ services:
       - ./logs/php:/var/log/php
     links:
       - mysql
+      - redis
   mysql:
     image: mysql:5.7.19
     volumes:
@@ -36,3 +37,5 @@ services:
       - 8855:80
     volumes:
       - /sessions
+  redis:
+    image: redis:4.0.1-alpine
