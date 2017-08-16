@@ -1,7 +1,7 @@
 version: "3"
 services:
   nginx:
-    build: ./images/nginx
+    image: gregorwebmaster/ngino
     ports:
       - "80:80"
       - "443:443"
@@ -14,7 +14,7 @@ services:
     links:
       - php71
   php71:
-    build: ./images/php71
+    image: gregorwebmaster/alpine-php7
     volumes:
       - ./config/php71/php-fpm.conf:/usr/local/etc/php-fpm.conf
       - ./data/www:/var/www
