@@ -36,4 +36,4 @@ If you have an idea, time and willingness to work, you are welcome :)
 
 ## License
 
-The SAXER is open-sourced software licensed under the MIT license.
+The NGINO WEBSERVER is open-sourced software licensed under the MIT license.
