@@ -4,7 +4,7 @@ logs/nginx/*.log
 logs/php/*.log
 data/www/*/
 !data/www/hello-world
-data/mysql
+data/mysql/*
 !data/mysql/.gitkeep
-config/nginx/vhosts
+config/nginx/vhosts/*
 !config/nginx/vhosts/hello-world.conf
