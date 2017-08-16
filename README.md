@@ -14,6 +14,11 @@ Docker configuration for LNPM server with Redis DB
 4. PhpMyAdmin - official image phpmyadmin/phpmyadmin
 5. Redis    - official image redis:4.0.1-alpine
 
+## Directories
+* config - for containers configurations files;
+* data - as data storage directory;
+* logs - directory to store logs files
+
 ## Used ports
 1. Nginx    - 80,443,8080
 2. phpMyAdmin - 8855
@@ -28,6 +33,12 @@ Remember to change default password after instalation
 1. clone this repository
 2. go into repository directory (default ngino_webserver)
 3. run as root **"docker-compose up -d"**
+4. call localhost:8080 in your broswer to look welcome page
+
+## Configuration
+### 1. Vhost for nginx
+  * Vhost files for nginx are storet into *config/www/vhost*. You can use hello-word.conf as exemplary file. 
+  * After create/change config file run as root **"docker restart nginowebserver_nginx_1"** to apply changes 
 
 ## Join to NGINO WEBSERVER
 
