@@ -2,3 +2,7 @@ tmp/
 .idea/
 logs/nginx/*.log
 logs/php/*.log
+data/www/*/
+!data/www/hello-world
+data/mysql
+!data/mysql/.gitkeep
