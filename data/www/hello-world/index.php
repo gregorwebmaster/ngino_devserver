@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h1>develop Server</h1>
+<h1 style="text-align: center">Hello World</h1>
 
 <?php
 echo phpinfo();
