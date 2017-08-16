@@ -28,3 +28,12 @@ Remember to change default password after instalation
 1. clone this repository
 2. go into repository directory (default ngino_webserver)
 3. run as root **"docker-compose up -d"**
+
+## Join to NGINO WEBSERVER
+
+If you have an idea, time and willingness to work, you are welcome :)
+
+
+## License
+
+The SAXER is open-sourced software licensed under the MIT license.
