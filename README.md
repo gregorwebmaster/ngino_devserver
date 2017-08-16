@@ -38,7 +38,9 @@ Remember to change default password after instalation
 ## Configuration
 ### 1. Vhost for nginx
   * Vhost files for nginx are storet into *config/www/vhost*. You can use hello-word.conf as exemplary file. 
-  * After create/change config file run as root **"docker restart nginowebserver_nginx_1"** to apply changes 
+  * After create/change config file run as root **"docker restart nginowebserver_nginx_1"** to apply changes
+### 2. Create Project
+* put project files into *data/www*
 
 ## Join to NGINO WEBSERVER
 
