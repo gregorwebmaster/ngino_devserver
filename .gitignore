@@ -1,10 +1,13 @@
 tmp/
 .idea/
-logs/nginx/*.log
-logs/php/*.log
+logs/nginx/*
+logs/php/*
 data/www/*/
 !data/www/hello-world
 data/mysql/*
 !data/mysql/.gitkeep
 config/nginx/vhosts/*
 !config/nginx/vhosts/hello-world.conf
+config/nginx/ssl/*
+
+!.gitkeep
