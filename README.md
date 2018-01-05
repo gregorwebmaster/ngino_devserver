@@ -1,5 +1,5 @@
 # ngino_webserver
-Docker configuration for LNPM server with Redis DB
+Docker configuration for LEMP server with Redis DB
 
 
 ## Requirements
